@@ -55,13 +55,13 @@ def new_note():
 	f = shelve.open('out.txt')# для этого используем модуль shelve
 	f[new_target] = [dt_start,dt_end,status]# создаем кортеж  со словарем
 	print (f.items)
-	f.close
+	f.close()
 
 	main()# Возващаемся в начало программы
 def all_note():
 	f = shelve.open('out.txt')
 	print (f.keys)
-	f.close
+	f.close()
 	#print(u'Посмотреть список всех задач')
 def perfom_note():
 	f = shelve.open('out.txt')
@@ -82,7 +82,7 @@ def del_note():
 	except KeyError:
 		print (u'Нет такой задачи.Повторите ввод!'.encode('utf-8'))
 		del_note()
-	f.close
+	f.close()
 	main()
 	#print(u'Удалить задачу')
 def exit_note():
